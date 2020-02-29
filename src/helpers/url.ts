@@ -23,12 +23,12 @@ export function buildURL(url: string, params?: any): string {
         if(val===null || typeof val === 'undefined') {
             return 
         }
-        let values = []
+        let values: string []
         if(Array.isArray(val)) {
             values = val
             key += '[]'
         }else {
-             values = [val]
+            values = [val]
         }
         values.forEach((val) => {
             if(isDate(val)) {

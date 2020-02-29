@@ -1,7 +1,7 @@
 const toString = Object.prototype.toString
 
 // 判断参数类型
-export function isData(val: any): val is Date {
+export function isDate(val: any): val is Date {
     return toString.call(val) === '[object Date]'
 }
 

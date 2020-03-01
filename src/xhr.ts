@@ -14,7 +14,7 @@ export default function xhr(config: AxiosRequestConfig): AxiosPromise {
             request.timeout = timeout   // 配合多少就是多长时间后超时 ms
         }
 
-        request.open(method.toUpperCase(), url, true)
+        request.open(method.toUpperCase(), url!, true)
 
         request.onreadystatechange = function handleLoad() {
             if(request.readyState !== 4) {
